@@ -35,20 +35,18 @@ namespace Cashbox
             SqlDataAdapter da1 = new SqlDataAdapter(cmd1);//создаем экземпляр класса SqlDataAdapter
             dt1.Clear();//чистим DataTable, если он был не пуст
             da1.Fill(dt1);//заполняем данными созданный DataTable
-            DGVF1.DataSource = dt1;//в качестве источника данных у dataGridView используем DataTable заполненный данными
             con.Close();//Закрываем соединение
-            AccessF1.Text = Convert.ToString(DGVF1.Rows[0].Cells[1].Value);//cчитать значение с грида
-            label3.Text = DGVF1.Rows[0].Cells[3].Value.ToString();//Доступ
-            Dostup.Value = label3.Text;
+            Dostup.Login = dt1.Rows[0][1].ToString();//Логин
+            Dostup.Access = dt1.Rows[0][3].ToString();//Доступ
 
-            if (textBox1.Text != "" & Convert.ToString(DGVF1.Rows[0].Cells[2].Value) == textBox1.Text & DateTime.Today <= Convert.ToDateTime("01.04.2020"))
+            if (textBox1.Text != "" & dt1.Rows[0][2].ToString() == textBox1.Text & DateTime.Today <= Convert.ToDateTime("01.04.2025"))
             {
-                Clipboard.SetText(AccessF1.Text);//Скопировать текст в буфер обмена
+                //Clipboard.SetText(AccessF1.Text);//Скопировать текст в буфер обмена
                 Form2 Form2 = new Form2();
                 Form2.Show();
                 this.Hide();
             }
-            else if (Convert.ToString(DGVF1.Rows[0].Cells[2].Value) != textBox1.Text)
+            else if (dt1.Rows[0][2].ToString() != textBox1.Text)
             {
                 MessageBox.Show("Неверный пароль", "Внимание!");
             }
@@ -68,7 +66,6 @@ namespace Cashbox
             SqlDataAdapter da = new SqlDataAdapter(cmd);//создаем экземпляр класса SqlDataAdapter
             dt.Clear();//чистим DataTable, если он был не пуст
             da.Fill(dt);//заполняем данными созданный DataTable
-            //DGVF1.DataSource = dt;//в качестве источника данных у dataGridView используем DataTable заполненный данными
             foreach (DataRow row in dt.Rows)
             {
                 comboBoxF1.Items.Add(row[0].ToString());
@@ -78,8 +75,6 @@ namespace Cashbox
         private void Form1_Load(object sender, EventArgs e)//Загрузка формы
         {
             textBox1.PasswordChar = '*';//Скрыть пароль
-            AccessF1.Visible = false;
-            DGVF1.Visible = false;
             Logins_select();
             comboBoxF1.SelectedIndex = 1;//пользователь по умолчанию
             textBox1.Select();//Установка курсора            

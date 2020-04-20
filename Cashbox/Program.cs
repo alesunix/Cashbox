@@ -21,6 +21,7 @@ namespace Cashbox
     }
     static class Dostup
     {
-        public static string Value { get; set; }       
+        public static string Access { get; set; }
+        public static string Login { get; set; }
     }
 }

@@ -33,15 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxF1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.DGVF1 = new System.Windows.Forms.DataGridView();
-            this.AccessF1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVF1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,28 +93,6 @@
             this.textBox1.Size = new System.Drawing.Size(260, 39);
             this.textBox1.TabIndex = 3;
             // 
-            // DGVF1
-            // 
-            this.DGVF1.AllowUserToAddRows = false;
-            this.DGVF1.AllowUserToDeleteRows = false;
-            this.DGVF1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVF1.Location = new System.Drawing.Point(4, 376);
-            this.DGVF1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.DGVF1.Name = "DGVF1";
-            this.DGVF1.ReadOnly = true;
-            this.DGVF1.Size = new System.Drawing.Size(381, 241);
-            this.DGVF1.TabIndex = 4;
-            // 
-            // AccessF1
-            // 
-            this.AccessF1.FormattingEnabled = true;
-            this.AccessF1.Location = new System.Drawing.Point(401, 376);
-            this.AccessF1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.AccessF1.Name = "AccessF1";
-            this.AccessF1.Size = new System.Drawing.Size(316, 39);
-            this.AccessF1.TabIndex = 5;
-            this.AccessF1.Visible = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -143,24 +117,11 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(465, 341);
-            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Доступ";
-            this.label3.Visible = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
@@ -202,8 +163,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(547, 368);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.AccessF1);
-            this.Controls.Add(this.DGVF1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBoxF1);
             this.Controls.Add(this.label2);
@@ -219,7 +178,6 @@
             this.Text = "Авторизация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVF1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -234,11 +192,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxF1;
         private System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.ComboBox AccessF1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.DataGridView DGVF1;
-        public System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel6;

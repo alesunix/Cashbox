@@ -97,9 +97,9 @@ namespace Cashbox
 
         private void Form2_Load(object sender, EventArgs e)//Загрузка формы
         {
-            Form1.AccessF1.Text = Clipboard.GetText();//Считать текст из буфера обмена 
-            label10.Text = Form1.AccessF1.Text;//Имя касира
-            string dostup = Dostup.Value;//Доступ
+            //Form1.AccessF1.Text = Clipboard.GetText();//Считать текст из буфера обмена 
+            label10.Text = Dostup.Login;//Имя касира
+            string dostup = Dostup.Access;//Доступ
             if (dostup == "Low")
             {
                 tabPage2.Enabled = false;
